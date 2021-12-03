@@ -16,6 +16,7 @@ const getUsers = async (req, res) => {
 const addUser = async (req, res) => {
   try {
     //
+    throw Error("Gagal membuat akun baru !");
     req.body.password = bcrypt.hashSync(req.body.password, salt);
 
     const newUser = new User(req.body);
